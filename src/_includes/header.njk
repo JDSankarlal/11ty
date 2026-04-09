@@ -8,15 +8,11 @@
         </div>
         <nav>  
           <ul role="list" class="nav-list flex-group">
+            {%- for page in collections.page | reverse -%}
             <li>
-              <a href="/">Home</a>
+              <a href="{{ page.url }}">{{ page.data.name }}</a>
             </li>
-            <li>
-              <a href="/blog/">Blog</a>
-            </li>
-            <li>
-                <a href = "/contact/">Contact</a>
-            </li>
+            {% endfor %}
           </ul>
         </nav>
       </div>
